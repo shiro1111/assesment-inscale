@@ -1,0 +1,39 @@
+.mat-icon{
+    height:150px !important;
+    width:150px !important;
+    font-size:150px !important;
+    color: whitesmoke;
+}
+mat-card{
+    width: 91%; 
+    height: 150px; 
+    display: flex; 
+    align-items: center;
+    
+    .card-content{
+        flex: 1 1 auto;
+    }
+
+   
+}
+.std-ta-center{
+    text-align: center;
+}
+.pink-background{
+    background-color: #ff006A;
+}
+.purple-background{
+    background-color: #981FAC;
+}
+.card-label{
+    color: whitesmoke;
+    span{
+        font-size: 14pt;
+        font-weight: 300;
+    }
+    label{
+        display: block;
+        font-weight: 600;
+        font-size: 24pt;
+    }
+}
