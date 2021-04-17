@@ -1,10 +1,17 @@
 table {
-    width: 100%;
-  }
-  
-  th.mat-sort-header-sorted {
-    color: black;
-  }
-  .table-header{
-    background-color: #e4e4e4;
-  }
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+.table-header {
+  background-color: #ffa7a7;
+}
+.mat-row:nth-child(even) {
+  background-color: whitesmoke;
+}
+
+.mat-row:nth-child(odd) {
+  background-color: white;
+}

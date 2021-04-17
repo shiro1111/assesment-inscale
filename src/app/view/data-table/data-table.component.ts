@@ -3,6 +3,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatSort, Sort } from '@angular/material/sort';
 import { ViewChild } from '@angular/core';
 import { Employee } from 'src/app/shared/interface/employee';
+import { PageEvent } from '@angular/material';
 
 @Component({
   selector: 'app-data-table',
@@ -12,11 +13,13 @@ import { Employee } from 'src/app/shared/interface/employee';
 
 export class DataTableComponent implements OnInit {
   displayedColumns: string[] = ['fullname', 'dateJoined', 'salary'];
-  
-  @ViewChild(MatSort, { static: false }) sort: MatSort;
-  @Input() data : Array<Employee>;
-  dataSource;
 
+  @ViewChild(MatSort, { static: false }) sort: MatSort;
+  @Input() data: Array<Employee>;
+  dataSource;
+  lowValue : number = 0;
+  highValue : number = 5;
+  pageSizeOptions = [5,10,25,100]
   constructor() { }
 
   ngOnInit() {
@@ -53,4 +56,9 @@ export class DataTableComponent implements OnInit {
     return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
   }
 
+  getPaginatorData(event: PageEvent): PageEvent {
+    this.lowValue = event.pageIndex * event.pageSize;
+    this.highValue = this.lowValue + event.pageSize;
+    return event;
+  }
 }

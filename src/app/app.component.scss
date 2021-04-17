@@ -1,3 +1,6 @@
+.body-container{
+    padding: 20px;
+}
 .mat-icon{
     height:150px !important;
     width:150px !important;
@@ -30,10 +33,15 @@ mat-card{
     span{
         font-size: 14pt;
         font-weight: 300;
+        letter-spacing: 0.6px;
     }
     label{
         display: block;
         font-weight: 600;
         font-size: 24pt;
+        letter-spacing: 0.6px;
     }
+}
+.border-right{
+    border-right: 1px solid white;
 }
